@@ -2,7 +2,17 @@
 ## 1.1	Anforderungen
 Im Dokumentationsteil Anforderungen ist Aufgabenstellung, die funktionalen und nicht-funktionalen Anforderungen zu finden. Um die Ansprüche an das Programm klar aufzuzeigen sind User-Stories zu verwenden. 
   
-Abbildung 1 Beispiel User-Storie
+| A | Erinnerung einstellen | 1 |
+ ----------------------------------- 
+ Ich als: User, <br>
+ möchte: Eine Erinnerung einstellen, <br>
+ um: mich daran zu erinnern, das Licht auszumachen, <br>
+ ----------------------------------- 
+ Die User Story ist fertig, wenn:
+ - [ ] Mercury
+ - [x] Venus
+ ----------------------------------- 
+
 
 ## 1.2	Architektur / Design
 Die Applikation sollte zwei Seiten umfassen. 
@@ -14,6 +24,7 @@ Die untere Karte zeigt an, wie die aktuelle Erinnerung eingestellt ist. Es ist e
 ![Page 2 Mockup](Page2.png "Page 2 Mockup")
  
 ## 1.3	Technischer Bericht
+Die App wurde mit TS erstellt, wobei die Expo als Plattform für den Start der App dient. Wir verwenden die React Native Paper-Bibliothek für Material-Design-Komponenten und nutzen npm als Paketmanager. 
 ### 1.3.1	Testing
 Zum Testing gehören Test-Cases, welche auf den User-Stories basieren. Die erstellten Test-Cases werden im Anschluss an die Realisierung geprüft. Das Ergebnis wird dabei im Testprotokoll festgehalten.
 Test Protocol
