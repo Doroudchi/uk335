@@ -1,25 +1,25 @@
-import AsyncStorage from "@react-native-async-storage/async-storage";
-import { useFocusEffect } from "@react-navigation/native";
-import React, { useState } from "react";
-import { Card, Text, Button } from "react-native-paper";
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import {useFocusEffect} from '@react-navigation/native';
+import React, {useState} from 'react';
+import {Card, Text, Button} from 'react-native-paper';
 
-export default function HomeScreen({ navigation }) {
-  const [time, setTime] = useState("");
-  const [weekdays, setWeekdays] = useState("");
+export default function HomeScreen({navigation}) {
+  const [time, setTime] = useState('');
+  const [weekdays, setWeekdays] = useState('');
 
   const getTime = async () => {
-    const timeStorage = JSON.parse(await AsyncStorage.getItem("time"));
+    const timeStorage = JSON.parse(await AsyncStorage.getItem('time'));
 
     if (timeStorage) {
-      const parsedTime = timeStorage.hours + ":" + timeStorage.minutes;
+      const parsedTime = timeStorage.hours + ':' + timeStorage.minutes;
       setTime(parsedTime);
     } else {
-      setTime("No time selected");
+      setTime('No time selected');
     }
   };
 
   const getWeekDays = async () => {
-    const weekdaysStorage = JSON.parse(await AsyncStorage.getItem("weekdays"));
+    const weekdaysStorage = JSON.parse(await AsyncStorage.getItem('weekdays'));
 
     if (weekdaysStorage) {
       const weekdays = [];
@@ -29,11 +29,11 @@ export default function HomeScreen({ navigation }) {
           weekdays.push(weekday);
         }
       }
-      const parsedWeekdays = weekdays.join(", ");
+      const parsedWeekdays = weekdays.join(', ');
 
       setWeekdays(parsedWeekdays);
     } else {
-      setWeekdays("No weekdays selected");
+      setWeekdays('No weekdays selected');
     }
   };
 
@@ -46,13 +46,13 @@ export default function HomeScreen({ navigation }) {
     <>
       <Card
         style={{
-          marginTop: "5%",
-          marginLeft: "5%",
-          marginRight: "5%",
-          backgroundColor: "#D9D9D9",
+          marginTop: '5%',
+          marginLeft: '5%',
+          marginRight: '5%',
+          backgroundColor: '#D9D9D9',
         }}
       >
-        <Card.Content style={{ alignItems: "center" }}>
+        <Card.Content style={{alignItems: 'center'}}>
           <Text variant="titleLarge">Light reminder</Text>
           <Text variant="titleMedium">Noser Young</Text>
         </Card.Content>
@@ -60,13 +60,13 @@ export default function HomeScreen({ navigation }) {
 
       <Card
         style={{
-          marginTop: "5%",
-          marginLeft: "5%",
-          marginRight: "5%",
-          backgroundColor: "#D9D9D9",
+          marginTop: '5%',
+          marginLeft: '5%',
+          marginRight: '5%',
+          backgroundColor: '#D9D9D9',
         }}
       >
-        <Card.Content style={{ alignItems: "center" }}>
+        <Card.Content style={{alignItems: 'center'}}>
           <Text variant="titleLarge">Reminder</Text>
 
           <Text variant="titleMedium">{time}</Text>
@@ -76,11 +76,11 @@ export default function HomeScreen({ navigation }) {
           <Text variant="titleLarge"> </Text>
 
           <Button
-            onPress={() => navigation.navigate("Details")}
+            onPress={() => navigation.navigate('Details')}
             buttonColor="#0069FF"
             textColor="#FFFFFF"
-            icon={"pen"}
-            style={{ borderRadius: 12 }}
+            icon={'pen'}
+            style={{borderRadius: 12}}
           >
             Edit
           </Button>
