@@ -16,8 +16,8 @@ const { LightTheme } = adaptNavigationTheme({
 export default function App() {
   return (
     <>
-      <Provider theme={MD3LightTheme}>
-        <NavigationContainer theme={LightTheme}>
+      <Provider>
+        <NavigationContainer>
           <Stack.Navigator initialRouteName="Home">
             <Stack.Screen name="Home" component={HomeScreen} />
             <Stack.Screen name="Details" component={DetailsScreen} />

@@ -1,6 +1,7 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import React, { useEffect, useState } from "react";
 import { View } from "react-native";
+import { Card } from "react-native-paper";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import ToggleSwitch from "toggle-switch-react-native";
 
@@ -35,6 +36,7 @@ export default function RepeatSelecter() {
   return (
     <>
       <SafeAreaProvider>
+      <Card style={{ marginTop: "5%", marginLeft: "5%", marginRight: "5%", backgroundColor: "#D9D9D9"}}>
         <View style={{ justifyContent: "center", alignItems: "center" }}>
           <ToggleSwitch
             isOn={repeat}
@@ -46,6 +48,7 @@ export default function RepeatSelecter() {
             }}
           />
         </View>
+        </Card>
       </SafeAreaProvider>
     </>
   );

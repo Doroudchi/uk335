@@ -1,7 +1,7 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import React from "react";
 import { View } from "react-native";
-import { Button } from "react-native-paper";
+import { Button, Card } from "react-native-paper";
 import { TimePickerModal } from "react-native-paper-dates";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 
@@ -25,12 +25,14 @@ export default function TimePicker() {
   return (
     <>
       <SafeAreaProvider>
+      <Card style={{ marginTop: "5%", marginLeft: "5%", marginRight: "5%", backgroundColor: "#D9D9D9"}}>
         <View style={{ justifyContent: "center", alignItems: "center" }}>
           <Button
             onPress={() => setVisible(true)}
             uppercase={false}
             buttonColor="#0069FF"
             textColor="#FFFFFF"
+            icon={"clock"}
           >
             Pick time
           </Button>
@@ -44,6 +46,7 @@ export default function TimePicker() {
             minutes={14}
           />
         </View>
+        </Card>
       </SafeAreaProvider>
     </>
   );

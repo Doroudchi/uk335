@@ -2,6 +2,7 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useFocusEffect } from "@react-navigation/native";
 import React, { useEffect, useState } from "react";
 import { Card, Text, Button } from "react-native-paper";
+import { Colors } from "react-native/Libraries/NewAppScreen";
 
 export default function HomeScreen({ navigation }) {
   const [time, setTime] = useState("");
@@ -44,14 +45,14 @@ export default function HomeScreen({ navigation }) {
 
   return (
     <>
-      <Card style={{ marginTop: "5%", marginLeft: "5%", marginRight: "5%" }}>
+      <Card style={{ marginTop: "5%", marginLeft: "5%", marginRight: "5%", backgroundColor: "#D9D9D9"}}>
         <Card.Content style={{ alignItems: "center" }}>
           <Text variant="titleLarge">Noser Young</Text>
           <Text variant="titleLarge">Light reminder</Text>
         </Card.Content>
       </Card>
 
-      <Card style={{ marginTop: "5%", marginLeft: "5%", marginRight: "5%" }}>
+      <Card style={{ marginTop: "5%", marginLeft: "5%", marginRight: "5%", backgroundColor: "#D9D9D9" }}>
         <Card.Content style={{ alignItems: "center" }}>
           <Text variant="titleLarge">Reminder on:</Text>
 
@@ -65,6 +66,7 @@ export default function HomeScreen({ navigation }) {
             onPress={() => navigation.navigate("Details")}
             buttonColor="#0069FF"
             textColor="#FFFFFF"
+            icon={"pen"}
           >
             Edit
           </Button>
