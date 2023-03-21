@@ -1,8 +1,7 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useFocusEffect } from "@react-navigation/native";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Card, Text, Button } from "react-native-paper";
-import { Colors } from "react-native/Libraries/NewAppScreen";
 
 export default function HomeScreen({ navigation }) {
   const [time, setTime] = useState("");
@@ -30,7 +29,7 @@ export default function HomeScreen({ navigation }) {
           weekdays.push(weekday);
         }
       }
-      const parsedWeekdays = weekdays.join(",");
+      const parsedWeekdays = weekdays.join(", ");
 
       setWeekdays(parsedWeekdays);
     } else {
@@ -45,16 +44,30 @@ export default function HomeScreen({ navigation }) {
 
   return (
     <>
-      <Card style={{ marginTop: "5%", marginLeft: "5%", marginRight: "5%", backgroundColor: "#D9D9D9"}}>
+      <Card
+        style={{
+          marginTop: "5%",
+          marginLeft: "5%",
+          marginRight: "5%",
+          backgroundColor: "#D9D9D9",
+        }}
+      >
         <Card.Content style={{ alignItems: "center" }}>
-          <Text variant="titleLarge">Noser Young</Text>
           <Text variant="titleLarge">Light reminder</Text>
+          <Text variant="titleMedium">Noser Young</Text>
         </Card.Content>
       </Card>
 
-      <Card style={{ marginTop: "5%", marginLeft: "5%", marginRight: "5%", backgroundColor: "#D9D9D9" }}>
+      <Card
+        style={{
+          marginTop: "5%",
+          marginLeft: "5%",
+          marginRight: "5%",
+          backgroundColor: "#D9D9D9",
+        }}
+      >
         <Card.Content style={{ alignItems: "center" }}>
-          <Text variant="titleLarge">Reminder on:</Text>
+          <Text variant="titleLarge">Reminder</Text>
 
           <Text variant="titleMedium">{time}</Text>
 
@@ -67,6 +80,7 @@ export default function HomeScreen({ navigation }) {
             buttonColor="#0069FF"
             textColor="#FFFFFF"
             icon={"pen"}
+            style={{ borderRadius: 12 }}
           >
             Edit
           </Button>

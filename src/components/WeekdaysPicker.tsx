@@ -1,8 +1,7 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import React, { useEffect, useState } from "react";
 import { View } from "react-native";
-import { Card } from "react-native-paper";
-import { SafeAreaProvider } from "react-native-safe-area-context";
+import { Card, Text } from "react-native-paper";
 import ToggleSwitch from "toggle-switch-react-native";
 
 export default function WeekdaysPicker() {
@@ -41,67 +40,119 @@ export default function WeekdaysPicker() {
 
   return (
     <>
-      <SafeAreaProvider>
-        <Card style={{ marginTop: "5%", marginLeft: "5%", marginRight: "5%", backgroundColor: "#D9D9D9"}}>
-        <View style={{ justifyContent: "center", alignItems: "center", marginTop:"10%"}}>
-          <View style={{marginBottom:"8%",}}>
-            <ToggleSwitch
-              isOn={weekdays.Monday}
-              onColor="#0069FF"
-              offColor="#5A5A5A"
-              label="Mo"
-              onToggle={async () => {
-                weekdaysToggle("Monday");
-              }}
-            />
-          </View>
-          <View style={{marginBottom:"8%"}}>
-            <ToggleSwitch
-              isOn={weekdays.Tuesday}
-              onColor="#0069FF"
-              offColor="#5A5A5A"
-              label="Tu"
-              onToggle={() => {
-                weekdaysToggle("Tuesday");
-              }}
-            />
-          </View>
-          <View style={{marginBottom:"8%"}}>
-            <ToggleSwitch
-              isOn={weekdays.Wednesday}
-              onColor="#0069FF"
-              offColor="#5A5A5A"
-              label="We"
-              onToggle={() => {
-                weekdaysToggle("Wednesday");
-              }}
-            />
-          </View>
-          <View style={{marginBottom:"8%"}}>
-            <ToggleSwitch
-              isOn={weekdays.Thursday}
-              onColor="#0069FF"
-              offColor="#5A5A5A"
-              label="Th"
-              onToggle={() => {
-                weekdaysToggle("Thursday");
-              }}
-            />
-          </View>
-          <View style={{marginBottom:"8%"}}>
-            <ToggleSwitch
-              isOn={weekdays.Friday}
-              onColor="#0069FF"
-              offColor="#5A5A5A"
-              label="Fr"
-              onToggle={() => {
-                weekdaysToggle("Friday");
-              }}
-            />
-          </View>
+      <Card
+        style={{
+          marginTop: "5%",
+          marginLeft: "5%",
+          marginRight: "5%",
+          backgroundColor: "#D9D9D9",
+        }}
+      >
+        <View
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-around",
+            alignItems: "center",
+            margin: "5%",
+          }}
+        >
+          <Text variant="titleMedium">Mo</Text>
+
+          <ToggleSwitch
+            isOn={weekdays.Monday}
+            onColor="#0069FF"
+            offColor="#5A5A5A"
+            onToggle={async () => {
+              weekdaysToggle("Monday");
+            }}
+          />
         </View>
-        </Card>
-      </SafeAreaProvider>
+
+        <View
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-around",
+            alignItems: "center",
+            margin: "5%",
+          }}
+        >
+          <Text variant="titleMedium">Tu</Text>
+
+          <ToggleSwitch
+            isOn={weekdays.Tuesday}
+            onColor="#0069FF"
+            offColor="#5A5A5A"
+            onToggle={() => {
+              weekdaysToggle("Tuesday");
+            }}
+          />
+        </View>
+
+        <View
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-around",
+            alignItems: "center",
+            margin: "5%",
+          }}
+        >
+          <Text variant="titleMedium">We</Text>
+
+          <ToggleSwitch
+            isOn={weekdays.Wednesday}
+            onColor="#0069FF"
+            offColor="#5A5A5A"
+            onToggle={() => {
+              weekdaysToggle("Wednesday");
+            }}
+          />
+        </View>
+
+        <View
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-around",
+            alignItems: "center",
+            margin: "5%",
+          }}
+        >
+          <Text variant="titleMedium">Th</Text>
+
+          <ToggleSwitch
+            isOn={weekdays.Thursday}
+            onColor="#0069FF"
+            offColor="#5A5A5A"
+            onToggle={() => {
+              weekdaysToggle("Thursday");
+            }}
+          />
+        </View>
+
+        <View
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-around",
+            alignItems: "center",
+            margin: "5%",
+          }}
+        >
+          <Text variant="titleMedium">Fr</Text>
+
+          <ToggleSwitch
+            isOn={weekdays.Friday}
+            onColor="#0069FF"
+            offColor="#5A5A5A"
+            onToggle={() => {
+              weekdaysToggle("Friday");
+            }}
+          />
+        </View>
+      </Card>
     </>
   );
 }

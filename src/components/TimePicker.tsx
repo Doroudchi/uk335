@@ -1,9 +1,8 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import React from "react";
 import { View } from "react-native";
-import { Button, Card } from "react-native-paper";
+import { Button } from "react-native-paper";
 import { TimePickerModal } from "react-native-paper-dates";
-import { SafeAreaProvider } from "react-native-safe-area-context";
 
 export default function TimePicker() {
   const [visible, setVisible] = React.useState(false);
@@ -24,30 +23,35 @@ export default function TimePicker() {
 
   return (
     <>
-      <SafeAreaProvider>
-      <Card style={{ marginTop: "5%", marginLeft: "5%", marginRight: "5%", backgroundColor: "#D9D9D9"}}>
-        <View style={{ justifyContent: "center", alignItems: "center" }}>
-          <Button
-            onPress={() => setVisible(true)}
-            uppercase={false}
-            buttonColor="#0069FF"
-            textColor="#FFFFFF"
-            icon={"clock"}
-          >
-            Pick time
-          </Button>
+      <View
+        style={{
+          justifyContent: "center",
+          alignItems: "center",
+          marginTop: "5%",
+          marginLeft: "5%",
+          marginRight: "5%",
+        }}
+      >
+        <Button
+          onPress={() => setVisible(true)}
+          uppercase={false}
+          buttonColor="#0069FF"
+          textColor="#FFFFFF"
+          icon={"clock"}
+          style={{ borderRadius: 12 }}
+        >
+          Pick time
+        </Button>
 
-          <TimePickerModal
-            use24HourClock={true}
-            visible={visible}
-            onDismiss={onDismiss}
-            onConfirm={onConfirm}
-            hours={12}
-            minutes={14}
-          />
-        </View>
-        </Card>
-      </SafeAreaProvider>
+        <TimePickerModal
+          use24HourClock={true}
+          visible={visible}
+          onDismiss={onDismiss}
+          onConfirm={onConfirm}
+          hours={12}
+          minutes={14}
+        />
+      </View>
     </>
   );
 }

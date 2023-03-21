@@ -1,17 +1,11 @@
-import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
+import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import React from "react";
-import {
-  Provider,
-  MD3LightTheme,
-  adaptNavigationTheme,
-} from "react-native-paper";
+import { Provider } from "react-native-paper";
 import DetailsScreen from "./src/screens/DetailsScreen";
 import HomeScreen from "./src/screens/HomeScreen";
+
 const Stack = createStackNavigator();
-const { LightTheme } = adaptNavigationTheme({
-  reactNavigationLight: DefaultTheme,
-});
 
 export default function App() {
   return (
