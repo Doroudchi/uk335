@@ -1,6 +1,24 @@
 # Schriftliche Dokumente
 ## 1.1	Anforderungen
-Im Dokumentationsteil Anforderungen ist Aufgabenstellung, die funktionalen und nicht-funktionalen Anforderungen zu finden. Um die Ansprüche an das Programm klar aufzuzeigen sind User-Stories zu verwenden. 
+In den Räumlichkeiten der Noser Young AG in Altstetten existieren neben der Deckenbeleuchtung diverse lokale Leuchten, verteilt über die Arbeitsplätze der Lernenden und der Mitarbeitenden.
+Diese Leuchten werden manuell bedient und so kommt es hin und wieder vor, dass diese Leuchten beim Verlassen der Räumlichkeiten nicht ausgeschaltet werden.
+Um dies zu vermindern, soll eine mobile Applikation realisiert werden, welche bei einer bestimmten Uhrzeit eine konfigurierbare Erinnerung zum Ausschalten der Leuchten bietet.
+
+### Funktionelle Anforderungen
+Als Benutzer kann ich die Uhrzeit angeben, zu der die Erinnerung eintreffen soll
+Als Benutzer kann ich die Wochentage angeben, an denen ich erinnert werden möchte
+Als Benutzer kann ich festlegen, wie oft die Nachricht wiederholt werden soll.
+
+### Nicht-funktionale Anforderungen
+Als Benutzer finde ich die Benutzeroberfläche ansprechend
+Als Benutzer kann ich mich auf den Seiten zurechtfinden
+
+### 1.1.2 Ziele
+ - [x] Der Benutzer sollte sehen können, ob eine Erinnerung eingestellt ist oder nicht. 
+ - [x] Der Benutzer sollte die Möglichkeit haben, eine Zeit für eine Erinnerung festzulegen.
+ - [x] Der Benutzer sollte die Wochentage auswählen können, an denen die Erinnerung eingestellt ist.
+ - [ ] Der Benutzer sollte wählen können, wie oft die Erinnerung wiederholt werden soll.
+ - [ ] Der Benutzer sollte eine Benachrichtigung auf seinem Handy erhalten. 
   
 | A | Erinnerung einstellen | 1 |
  ----------------------------------- 
@@ -9,8 +27,9 @@ Im Dokumentationsteil Anforderungen ist Aufgabenstellung, die funktionalen und n
  um: mich daran zu erinnern, das Licht auszumachen, <br>
  ----------------------------------- 
  Die User Story ist fertig, wenn:
- - [ ] Mercury
- - [x] Venus
+ - [ ] Der Benutzer hat die aktuelle Erinnerung gesehen.
+ - [ ] Der Benutzer hat die aktuelle Erinnerung geändert.
+ - [ ] Der Benutzer hat die neu geänderte Erinnerung gesehen. 
  ----------------------------------- 
 
 
@@ -23,8 +42,9 @@ Die untere Karte zeigt an, wie die aktuelle Erinnerung eingestellt ist. Es ist e
 <br> 
 ![Page 2 Mockup](Page2.png "Page 2 Mockup")
  
+[Figma Link](https://www.figma.com/file/GjetGNBuKabH9ujdrePub6/Light-Reminder?node-id=0-1&t=rDZi3L1KxI49qXCF-0)
 ## 1.3	Technischer Bericht
-Die App wurde mit TS erstellt, wobei die Expo als Plattform für den Start der App dient. Wir verwenden die React Native Paper-Bibliothek für Material-Design-Komponenten und nutzen npm als Paketmanager. 
+Die App wurde mit TS erstellt, wobei die Expo als Plattform für den Start der App dient. Wir verwenden die React Native Paper-Library für Material-Design-Komponenten und nutzen npm als Paketmanager. 
 ### 1.3.1	Testing
 Zum Testing gehören Test-Cases, welche auf den User-Stories basieren. Die erstellten Test-Cases werden im Anschluss an die Realisierung geprüft. Das Ergebnis wird dabei im Testprotokoll festgehalten.
 Test Protocol
