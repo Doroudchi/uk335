@@ -1,11 +1,11 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import React, {useEffect, useState} from 'react';
-import {View} from 'react-native';
+import {ToastAndroid, View} from 'react-native';
 import {Text} from 'react-native-paper';
-import ToggleSwitch from 'toggle-switch-react-native';
+import NumericInput from 'react-native-numeric-input';
 
 export default function RepeatSelecter() {
-  const [repeat, setRepeat] = useState(false);
+  const [repeat, setRepeat] = useState(0);
 
   async function asyncStorageGetRepeat() {
     const repeatStorage = JSON.parse(await AsyncStorage.getItem('repeat'));
@@ -25,12 +25,19 @@ export default function RepeatSelecter() {
     });
   }, []);
 
-  const repeatToggle = async () => {
-    let repeat = await asyncStorageGetRepeat();
-    repeat = !repeat;
+  const repeatToggle = async value => {
+    const repeat = value;
     setRepeat(repeat);
     AsyncStorage.setItem('repeat', JSON.stringify(repeat));
   };
+
+  function showMinToast() {
+    ToastAndroid.show('Minimum number of repetitions reached', ToastAndroid.SHORT);
+  }
+
+  function showMaxToast() {
+    ToastAndroid.show('Maximum number of repetitions reached', ToastAndroid.SHORT);
+  }
 
   return (
     <>
@@ -43,15 +50,25 @@ export default function RepeatSelecter() {
           margin: '5%',
         }}
       >
-        <Text variant="titleMedium">Repeat?</Text>
-
-        <ToggleSwitch
-          isOn={repeat}
-          onColor="#0069FF"
-          offColor="#5A5A5A"
-          onToggle={async () => {
-            repeatToggle();
+        <Text variant="titleMedium">How often repeated?</Text>
+        <NumericInput
+          onChange={value => {
+            repeatToggle(value);
+            value;
           }}
+          totalWidth={100}
+          totalHeight={33}
+          rounded
+          minValue={0}
+          maxValue={5}
+          onLimitReached={(isMax, msg) => {
+            if (isMax) {
+              showMaxToast();
+            } else {
+              showMinToast();
+            }
+          }}
+          textColor="#000000"
         />
       </View>
     </>
