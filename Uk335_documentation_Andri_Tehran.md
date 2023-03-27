@@ -115,18 +115,10 @@ npx prettier --write .
 ```
 
 ### 1.3.1 Testing
+### Test Concept
+Jeder einzelne Test in der folgenden Tabelle wurde manuell in einer Android-Umgebung mit Expo durchgeführt. Die Tests sind alle Komponententests und White-Box-Tests. 
 
-Zum Testing gehören Test-Cases, welche auf den User-Stories basieren. Die erstellten Test-Cases werden im Anschluss an die Realisierung geprüft. Das Ergebnis wird dabei im Testprotokoll festgehalten.
-Test Protocol
-TestCaseId Component Priority Description/
-Test Summary Pre-requisites Test Steps Expected Result Actual Result Status Test Executed By
-GoogleSearch_1 Search_Bar_Module P0 Verify that when a user writes a search term and presses enter, search results should be displayed Browser is launched 1. Write the url - http://google.com in the browser's URL bar and press enter. Search results related to 'apple' should be displayed Search results with 'apple' keyword are displayed Pass TesterK 2. Once google.com is launched, write the search term - "Apple" in the google search bar. 3. Press enter.
-Abbildung 2 Beispiel Testprotokoll
-
-Der erwartete Umfang der Testabdeckung beträgt ein Happy-Path pro Feature und 2 Error-Paths (gesamthaft).
-
-<br>
-
+![Tests](Tests.png 'Tests')
 ## 1.5 Code Dokumentation
 
 Neben den Dokumenten soll im TSDocs im Code verwendet werden. TSDocs ist für TypeScript das, was JavaDocs für Java ist. Es beschreibt die Funktionalitäten des Codes und lässt sich mit zusätzlichen Tools extrahieren und zu einer Dokumentation zusammengefügt. TSDocs muss für die wichtigsten Funktionen vorhanden sein.
