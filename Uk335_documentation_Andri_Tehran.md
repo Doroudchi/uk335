@@ -47,6 +47,7 @@ Die User Story ist fertig, wenn:
 
 Die Applikation sollte zwei Seiten umfassen.
 Die erste Seite besteht aus zwei Karten. Auf der oberen steht der Name des Unternehmens und der Name der Anwendung in schwarzer Schrift auf grauem Hintergrund. Die untere Karte zeigt an, wie die aktuelle Erinnerung eingestellt ist. Es ist ein schwarzer Text auf grauem Hintergrund. Ausserdem gibt es eine blaue Schaltfläche zum Bearbeiten, die zur zweiten Seite führt.
+Als Farbkonzept wählten wir das typische Blau, das überall bei Noser Young verwendet wird, sowie Grau und Weiss, die das dunkle Blau gut ergänzen. 
 <br>
 ![Page 1 Mockup](HomeScreen.png 'Page 1 Mockup')
 Die zweite Seite besteht aus 5 Schaltern, die für die 5 Wochentage stehen, einer Schaltfläche, die die Zeitauswahl öffnet, und einem Wiederholungszähler.
