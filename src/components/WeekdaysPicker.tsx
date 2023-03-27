@@ -31,6 +31,11 @@ export default function WeekdaysPicker() {
     });
   }, []);
 
+  /**
+   *
+   * @param weekday The selected weekday eg. Monday
+   * @returns Nothing
+   */
   const weekdaysToggle = async weekday => {
     const weekdays = await asyncStorageGetWeekDays();
     weekdays[weekday] = !weekdays[weekday];

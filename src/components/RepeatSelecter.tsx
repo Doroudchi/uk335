@@ -25,6 +25,11 @@ export default function RepeatSelecter() {
     });
   }, []);
 
+  /**
+   *
+   * @param value The selected repeat counter value eg. 3
+   * @returns Nothing
+   */
   const repeatToggle = async value => {
     const repeat = value;
     setRepeat(repeat);
