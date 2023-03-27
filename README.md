@@ -1,11 +1,13 @@
-# uek335
-## Light reminder
-### About
+# uek335 - Light reminder
+
+## About
+
 A simple light reminder app made with React-Native, Typescript and Expo.
 
 <br>
 
-### Initialization
+## Initialization
+
 Install all required dependencies and or dev-dependencies
 
 ```bash
@@ -52,6 +54,7 @@ Run on your desired device/platform
 
 **NOTE**  
 Please run the following command to format the code before comitting
+
 ```bash
 npx prettier --write .
 ```
