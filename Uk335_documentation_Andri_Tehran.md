@@ -116,7 +116,7 @@ npx prettier --write .
 
 ### 1.3.1 Testing
 ### Test Concept
-Jeder einzelne Test in der folgenden Tabelle wurde manuell in einer Android-Umgebung mit Expo durchgeführt. Die Tests sind alle Komponententests und White-Box-Tests. 
+Jeder einzelne Test in der folgenden Tabelle wurde manuell in einer Android-Umgebung mit Expo durchgeführt. Die Tests sind alle Komponententests und White-Box-Tests. Das Testgerät war ein Windows 10 pro 21H2 64-Bit OS Laptop mit 32 GB DDR4 Ram mit einem Intel Core i7 1185G7 Prozessor und ein Samsung Galaxy 21+ mit Android Version 13.
 
 ![Tests](Tests.png 'Tests')
 ## 1.5 Code Dokumentation
